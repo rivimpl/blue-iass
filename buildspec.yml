@@ -6,14 +6,18 @@ phases:
     runtime-versions:
       docker: 18
     commands:
-      - apt install python3
-      - apt install python3-pip
+      #- apt install python3
+      #- apt install python3-pip
+      - apt update
   build:
     commands:
-      - echo "Testando Build e Deploy"
-#artifacts:
-#  files:
-#    - '*.py'
-#    - '**/*'
-#  discard-paths: no
-#  name: backend-artifact
+      - touch teste_deploy.txt
+
+artifacts:
+  files:
+    - '*.txt'
+    #- '**/*'
+    - 'scripts/*'
+    - 'appspec.yml'
+  discard-paths: no
+  name: blue-iaas-backend-artifact
