@@ -1,7 +1,10 @@
----
+----
 version: 0.2
+---
 phases:
   install:
     commands:
-      - sudo apt update -y 
-    
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -y maven
+      
