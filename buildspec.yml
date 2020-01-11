@@ -8,7 +8,7 @@ phases:
     commands:
       #- apt install python3
       #- apt install python3-pip
-      - apt update
+      - echo "salve"
   build:
     commands:
       - touch teste_deploy.txt

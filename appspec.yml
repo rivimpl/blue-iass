@@ -2,10 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: teste_deploy.txt
-    destination: /tmp/dep.txt
+    destination: /tmp
 
 hooks:
   ApplicationStart:
     - location: scripts/hellow.sh
       timeout: 30
-
